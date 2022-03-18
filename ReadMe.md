@@ -90,7 +90,7 @@ function Win() public payable
 ```
 
 ### ctx()
-```
+```solidity
 function ctx()
 ```
 The context of the board on the blockchain. It returns structure:
