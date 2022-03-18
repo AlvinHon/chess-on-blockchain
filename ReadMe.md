@@ -44,7 +44,7 @@ Smart Contract should have functions:
 - Pass and Withdraw the game
 - Collect the bet if win
 
-## Develoment
+## Development
 Here used Brownie and Python for development, testing, contract deployment and client application. 
 This repo includes a GUI in TKinter as a tool to simulate smart contract client (player).
 
