@@ -102,10 +102,10 @@ enum PlayerState {
 }
 
 struct Player {
-        address player_address;
-        PlayerState state;
-        uint256 bet;
-    }
+    address player_address;
+    PlayerState state;
+    uint256 bet;
+}
 
 struct Context {  
     Player PlayerOne;
