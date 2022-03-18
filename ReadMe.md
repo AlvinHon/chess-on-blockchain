@@ -50,9 +50,9 @@ This repo includes a GUI in TKinter as a tool to simulate smart contract client 
 
 Below are screenshots for the application:
 
-:::image type="content" source="screens/board.png" alt-text="board":::
+![alt text](screens/board.png)
 
-:::image type="content" source="screens/menu.png" alt-text="menu":::
+![alt text](screens/menu.png)
 
 To compile the smart contract:
 
@@ -67,6 +67,7 @@ To run the client application:
 `brownie run scripts\client.py`
 
 To run the performance script:
+
 `brownie run scripts\stats.py`
 
 To test the cases in folder .\tests\:
@@ -93,7 +94,7 @@ function Win() public payable
 function ctx()
 ```
 The context of the board on the blockchain. It returns structure:
-```c
+```solidity
 enum PlayerState {
     Normal,
     Withdraw,
@@ -121,25 +122,25 @@ struct Context {
 
 ### GetPiecesInfo()
 
-```
+```solidity
 function GetPiecesInfo() public view returns (string memory)
 ```
 
 Information of the board in string format:
-```json
+```
 [(Piece ID, Piece Type, row, column, alive), ...]
 ```
 The lenght of the array is 32 (i.e. 32 pieces).
 
 - **Piece ID**: 0-indexed integer to represent the id of each piece.
-```c
+```solidity
 enum PieceID {
     p1_king, p1_queen, p1_rookl, p1_rookr, p1_bishopl, p1_bishopr, p1_knightl, p1_knightr, p1_pawn1, p1_pawn2, p1_pawn3, p1_pawn4, p1_pawn5, p1_pawn6, p1_pawn7, p1_pawn8,
     p2_king, p2_queen, p2_rookl, p2_rookr, p2_bishopl, p2_bishopr, p2_knightl, p2_knightr, p2_pawn1, p2_pawn2, p2_pawn3, p2_pawn4, p2_pawn5, p2_pawn6, p2_pawn7, p2_pawn8
 }
 ```
 - **Piece Type**: 0-indexed integer to represnet the type of the piece. It can change if pawn is promoted.
-```c
+```solidity
 enum PieceType{
     king, rook, bishop, queen, knight, pawn
 }
@@ -151,7 +152,7 @@ enum PieceType{
 
 ### JoinGame()
 
-```
+```solidity
 function JoinGame(uint256 minEntryFee) payable
 ```
 
@@ -162,7 +163,7 @@ Called by client to join the game. It is **Not** the bet which should be set as 
 
 ### MovePiece()
 
-```
+```solidity
 function MovePiece(PieceID pid, uint8 pos_r, uint8 pos_c, uint256 speccmd)
 ```
 
@@ -173,7 +174,7 @@ Commands send from player to associate with the board.
 - pos_c: column of the target position to move, which is 0-indexed (i.e. in range of \[0,7\])
 - speccmd: 0-indexed integer for commands such as caslting, pawn promotion. Also include game operations such as Pass and Withdraw.
 
-```c
+```solidity
 enum SpecCommand {
     Null, Withdraw, Pass, Castle, PromoteToQueen, PromoteToRook, PromoteToBishop, PromoteToKnight
 }
@@ -186,7 +187,7 @@ enum SpecCommand {
 
 ### Win()
 
-```
+```solidity
 function Win() public payable
 ```
 
