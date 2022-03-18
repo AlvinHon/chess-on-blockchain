@@ -76,7 +76,7 @@ To test the cases in folder .\tests\:
 
 
 ### Limitations
-This project is not for putting on production blockchain (No one will pay for such game with real moeny!), but the design is open to extend to that. It takes configuration files .env and brownie-config.yaml for various tunning transaction on blockchain.
+This project is not for putting on production blockchain (No one will pay for such game with real money!), but the design is open to extend to that. It takes configuration files .env and brownie-config.yaml for various tunning transaction on blockchain.
 
 ## APIs
 
