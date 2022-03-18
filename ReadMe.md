@@ -169,10 +169,10 @@ function MovePiece(PieceID pid, uint8 pos_r, uint8 pos_c, uint256 speccmd)
 
 Commands send from player to associate with the board.
 
-- pid: Piece ID defined in the board (smart contract).
-- pos_r: row of the target position to move, which is 0-indexed (i.e. in range of \[0,7\])
-- pos_c: column of the target position to move, which is 0-indexed (i.e. in range of \[0,7\])
-- speccmd: 0-indexed integer for commands such as caslting, pawn promotion. Also include game operations such as Pass and Withdraw.
+- **pid**: Piece ID defined in the board (smart contract).
+- **pos_r**: row of the target position to move, which is 0-indexed (i.e. in range of \[0,7\])
+- **pos_c**: column of the target position to move, which is 0-indexed (i.e. in range of \[0,7\])
+- **speccmd**: 0-indexed integer for commands such as caslting, pawn promotion. Also include game operations such as Pass and Withdraw.
 
 ```solidity
 enum SpecCommand {
