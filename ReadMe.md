@@ -81,12 +81,12 @@ This project is not for putting on production blockchain (No one will pay for su
 ## APIs
 
 Public functions defined in smart contract:
-```javascript
+```solidity
 function ctx()
-function GetPiecesInfo() public view returns (string memory)
+function GetPiecesInfo() returns (string memory)
 function JoinGame(uint256 minEntryFee) payable
 function MovePiece(PieceID pid, uint8 pos_r, uint8 pos_c, uint256 speccmd)
-function Win() public payable
+function Win() payable
 ```
 
 ### ctx()
@@ -123,7 +123,7 @@ struct Context {
 ### GetPiecesInfo()
 
 ```solidity
-function GetPiecesInfo() public view returns (string memory)
+function GetPiecesInfo() returns (string memory)
 ```
 
 Information of the board in string format:
@@ -188,7 +188,7 @@ enum SpecCommand {
 ### Win()
 
 ```solidity
-function Win() public payable
+function Win() payable
 ```
 
 Winner collects the bet from players (player 1's bet plus Player 2's bet) after winning the game. The balance of the smart contract will add to winner's balance and the contract is no longer playable.
