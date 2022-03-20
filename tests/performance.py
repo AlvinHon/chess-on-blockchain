@@ -122,7 +122,7 @@ def QueenMoveStep(ng = None):
     (acc1, acc2, b, piecesinfo) = newgame() if ng is None else ng
     gas_stat_black = []
     gas_stat_white = []
-    #allow space for bishop
+    #allow space for queen
     b.MovePiece(11,piecesinfo[11][2] + 1,piecesinfo[11][3],0, {"from":acc1})
     b.MovePiece(27,piecesinfo[27][2] - 1,piecesinfo[27][3],0, {"from":acc2})
     # init: Black Queen(1) = (0,2) White Queen(17) = (7,2)
@@ -140,10 +140,10 @@ def KingMoveStep(ng = None):
     (acc1, acc2, b, piecesinfo) = newgame() if ng is None else ng
     gas_stat_black = []
     gas_stat_white = []
-    #allow space for bishop
+    #allow space for king
     b.MovePiece(12,piecesinfo[12][2] + 2,piecesinfo[12][3],0, {"from":acc1})
     b.MovePiece(28,piecesinfo[28][2] - 2,piecesinfo[28][3],0, {"from":acc2})
-    # init: Black Queen(1) = (0,2) White Queen(17) = (7,2)
+    # init: Black King(0) = (0,2) White King(16) = (7,2)
     for (r,c) in [(1,4),(2,4),(2,3),(3,3),(2,3),(2,4)]:
         tx = b.MovePiece(0,r,c,0,{"from":acc1})
         gas_stat_black.append(tx.gas_used)
