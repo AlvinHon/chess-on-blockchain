@@ -11,7 +11,7 @@ This chanllenge is attempting to overcome to limitations on the Programming Lang
 - Make fair interactions (gas paid by both players should be nearly same amount regardless of which pieces to be moved)
 - Correctness, Security, Code simplicity
 
-The lastest stats (check how to perform the stats at [tests\performance.py](tests\performance.py)):
+The lastest stats (check how to perform the stats at [tests\performance.py](tests/performance.py)):
 
 |Movement  |Gas Used (Black)|Gas Used (White)|
 |---------|---------|---------|
