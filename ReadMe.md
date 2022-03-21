@@ -6,7 +6,7 @@ This project is about implementation of chess as smart contract on ethereum bloc
 - Player interacts the smart contract to "move" the pieces on the "board"
 - Winner will be rewarded the bet from loser
 
-This chanllenge is attempting to overcome to limitations on the Programming Language for smart contract, Solidity. For instant, player will pay the gas when moving pieces on board, speed of the transaction, code size is limited (24KB), etc. To reduce those negative impacts, Smart Contract should be implemented so that:
+This challenge is attempting to overcome to limitations on the Programming Language for smart contract, Solidity. For instant, player will pay the gas when moving pieces on board, speed of the transaction, code size is limited (24KB), etc. To reduce those negative impacts, Smart Contract should be implemented so that:
 - Minimize gas 
 - Make fair interactions (gas paid by both players should be nearly same amount regardless of which pieces to be moved)
 - Correctness, Security, Code simplicity
